@@ -26,5 +26,12 @@ namespace hsiaw_githubSQLiDetector
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock newText = new TextBlock();
+            newText.Text = "Searching for SQLi vulnerabilities in: ";
+            mainStack.Children.Add(newText);
+        }
     }
 }
