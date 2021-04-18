@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hsiaw_githubSQLiDetector.Backend;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,11 +28,12 @@ namespace hsiaw_githubSQLiDetector
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             TextBlock newText = new TextBlock();
-            newText.Text = "Searching for SQLi vulnerabilities in: ";
+            newText.Text = "Searching for SQLi vulnerabilities in: " + linkBox.Text;
             mainStack.Children.Add(newText);
+            
         }
     }
 }
